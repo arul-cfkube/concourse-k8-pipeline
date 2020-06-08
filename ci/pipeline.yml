@@ -9,7 +9,7 @@ resources:
 - name: repo
   type: git
   source:
-    uri: git://github.com/arulvannala/concourse-k8-pipeline-.git
+    uri: git://github.com/arulvannala/concourse-k8-pipeline.git
     branch: master
     paths: [deploy/*]
 
