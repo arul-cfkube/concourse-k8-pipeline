@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-pipeline-app
+  labels:
+    app: test-pipeline-app
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: test-pipeline-app

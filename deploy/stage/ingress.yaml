@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: test-pipeline-app
+  labels:
+    app: test-pipeline-app
+spec:
+  rules:
+  - host: stage-test-pipeline-app.example.local
+    http:
+      paths:
+      - backend:
+          serviceName: test-pipeline-app
+          servicePort: 80

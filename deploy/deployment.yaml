@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: test-pipeline-app
+  name: test-pipeline-app
+spec:
+  selector:
+    matchLabels:
+      app: test-pipeline-app
+  template:
+    metadata:
+      labels:
+        app: test-pipeline-app
+    spec:
+      containers:
+      - name: test-pipeline-app
+        #image: zlabjp/test-pipeline-app:v2
+        image: harbor.run.haas-208.pez.pivotal.io/arulimages/myapp:v1
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          timeoutSeconds: 20
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          timeoutSeconds: 20
+        lifecycle:
+          preStop:
+            exec:
+              command: ["sh", "-c", "sleep 1; nginx -s quit; sleep 3"]
+      imagePullSecrets:
+      - name: regcreds
