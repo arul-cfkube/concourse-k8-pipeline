@@ -1,4 +1,5 @@
 
+# concourse-k8-pipeline
 ## Preparing
 
 1. Create `stage` and `prod` namespaces
@@ -26,6 +27,4 @@ $ ./create-kubeconfig concourse --namespace prod
 ## License
 
 All files in this repository are released under the MIT License, see LICENSE.txt.
-# k8-pipeline-concourse
-# k8-pipeline-concourse
 # concourse-k8-pipeline
