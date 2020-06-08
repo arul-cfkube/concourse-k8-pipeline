@@ -1,9 +1,3 @@
-# Concourse CI/CD Meetup Tokyo #7
-
-This repository contains demo scripts for "Continous Delivery with Concourse and Kubernetes" which talks at Concourse CI/CD Meetup Tokyo #7. On this demo, we use [zlabjp/kubernetes-resource](https://github.com/zlabjp/kubernetes-resource), which is a concourse resource for controlling the Kubernetes cluster.
-
-- URL https://www.meetup.com/Concourse-CI-Tokyo-Meetup/events/244165635
-- Slide: https://bit.ly/concourse-and-k8s
 
 ## Preparing
 
